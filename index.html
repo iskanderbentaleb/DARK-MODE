@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARK MODE</title>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.text {
+    margin: 1rem;
+    padding: 1rem;
+
+}
+
+input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 100px;
+    height: 55px;
+    background: rgb(173, 173, 173);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+label:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 90px;
+    transition: 0.3s;
+    background: rgb(255, 255, 255);
+}
+
+input:checked+label {
+    background: #271f38;
+    transition: 0.5s;
+}
+
+input:checked+label:after {
+    transition: 0.5s;
+    top: 5px;
+    left: 5px;
+    transform: translateX(100%);
+    background-color: aliceblue;
+}
+
+
+
+.dark {
+    transition: .6s ease-in;
+    color: #FFFFFF ;
+    background: #17141d;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+<body>
+    <div class="text">
+        <h1>Dark Mode</h1>
+    </div>
+    <div class="btn">
+        <input onclick="myfunction()" type="checkbox" id="switch">
+        <label for="switch"></label>
+    </div>
+</body>
+
+
+
+
+
+
+
+<script>
+function myfunction() {
+    var element = document.body;
+    element.classList.toggle("dark");
+}
+</script>
+</body>
+</html>
